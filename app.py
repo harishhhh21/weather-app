@@ -1,0 +1,13 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+API_KEY = "7516e72f391945c18d5705273bfc4193"
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    print("Weather Ultra Pro running on http://127.0.0.1:5000")
+    app.run(debug=True, port=5000)
